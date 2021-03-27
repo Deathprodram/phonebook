@@ -134,7 +134,6 @@
                         this.pageConfig.page = pageNum
                         this.pageConfig.allCount = v.data.data_count
                         this.pageConfig.allPages = Math.ceil(this.pageConfig.allCount / this.pageConfig.count)
-                        console.log(v)
                     })
             },
             sortPhoneBookData: function(sortKey, e) {

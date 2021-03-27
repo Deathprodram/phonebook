@@ -14,28 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $phone = \App\Models\Phone::find(4);
-//    dd($phone->user->name);
-    $phone->user->name = 'Samat';
-    $phone->phone = '7475300039';
-    $phone->user->save();
-    $phone->save();
-//    dd(\App\Models\Phone::first()->phone);
-//    $countries = file_get_contents('http://country.io/names.json');
-//    $countries = json_decode($countries, true);
-//
-//    $codes = file_get_contents('http://country.io/phone.json');
-//    $codes = json_decode($codes, true);
-//    // dd(array_merge_recursive($countries, $codes));
-//    $d = [];
-//    foreach (array_merge_recursive($countries, $codes) as $k => $v) {
-////        \App\Models\Country::create([
-////            'name' => $v[0],
-////            'phone_code' => $v[1],
-////            'shortcode' => $k,
-////        ]);
-//    }
-//    dd($d);
     return view('layouts.admin');
 });
 

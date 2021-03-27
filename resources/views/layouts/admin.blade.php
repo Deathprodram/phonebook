@@ -12,23 +12,10 @@
 <body>
 <div id="app">
     <div class="wrapper">
-        <div class="main-header">
-            <div class="logo-header">
-                <a href="#" class="logo">
-                    Phonebook
-                </a>
-                <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
-            </div>
-        </div>
-        <navbar></navbar>
-        <div class="main-panel">
+        <div class="main-panel" style="width: 100%">
             <div class="content">
                 <div class="container-fluid">
                     <phonebook></phonebook>
-{{--                    <router-view name="phonebook"></router-view>--}}
                 </div>
             </div>
         </div>

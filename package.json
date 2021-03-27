@@ -18,9 +18,5 @@
         "vue-template-compiler": "^2.6.12",
         "vue": "^2.6.12"
     },
-    "dependencies": {
-        "vue-image-crop-upload": "^3.0.1",
-        "vue-router": "^3.5.1",
-        "vue-search-select": "^2.9.3"
-    }
+    "dependencies": {}
 }

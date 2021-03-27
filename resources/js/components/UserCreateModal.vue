@@ -25,11 +25,6 @@
                                         {{ country.shortcode +' - '+ country.phone_code }}
                                     </option>
                                 </select>
-<!--                                <model-select-->
-<!--                                    :options="countrySelectOptions"-->
-<!--                                    v-model="formUserData.phoneData[(n-1)].country_id"-->
-<!--                                    placeholder="Код страны"-->
-<!--                                ></model-select>-->
                             </div>
                             <div class="col-sm-7">
                                 <input type="text"
@@ -61,10 +56,6 @@
                     </form>
 
                 </div>
-
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>-->
-<!--                </div>-->
             </div>
 
         </div>
@@ -72,15 +63,9 @@
 </template>
 
 <script>
-    import { ModelSelect } from 'vue-search-select';
-    // import { CropImage } from 'vue-image-crop-uploade';
 
     export default {
         name: "UserCreateModal",
-        components: {
-            ModelSelect,
-            // CropImage,
-        },
         props: {
             formUserData: {},
         },
@@ -100,13 +85,6 @@
             axios.get('/country/list')
                 .then(v => {
                     this.countries = v.data
-                    this.countrySelectOptions = this.countries.map(val => {
-                        return {
-                            value: val.id,
-                            text: val.phone_code +' - '+ val.shortcode,
-                        }
-                    })
-                    console.log(this.countries)
                 })
         },
         methods: {
@@ -134,8 +112,7 @@
                     axios.post(url, this.formUserData)
                         .then(v => {
                             $('#user-create').modal('hide')
-                            console.log(v)
-                            // window.location.reload()
+                            window.location.reload()
                         })
                 }
             },
